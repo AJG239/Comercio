@@ -1,0 +1,23 @@
+{
+    "comercios":[
+        {
+            "id": 1,
+            "Ciudad": "Madrid",
+            "Actividad": "Pesca",
+            "Titulo": "Pesacdería Los Mellizos",
+            "Textos": "Si tiene una cena elegante llevese un bogavante",
+            "Foto_perfil": "Mellizos.jpg",
+            "Datos_Admin": [
+                {
+                    "Scoring": 5,
+                    "Numero_Puntuaciones": 3,
+                    "Reseñas":[
+                        "La vendedora muy maja",
+                        "Los precios asequibles y la vendedora muy maja",
+                        "Otro día le pido el numero a la vendedora"
+                    ]
+                }
+            ]
+        }
+    ]
+}
