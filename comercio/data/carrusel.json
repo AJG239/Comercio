@@ -1,0 +1,24 @@
+{
+    "img": {
+        "carrusel_img": [
+            {
+              "id": 1,
+              "imageUrl": "https://static-resources.mirai.com/wp-content/uploads/sites/1745/20220819091833/comercios-tradicionales-Barcelona.jpg"
+            },
+            {
+              "id": 2,
+              "imageUrl": "https://ganemospalencia.com/wp-content/uploads/2020/04/5551353-1080x675.jpg"
+            },
+            {
+              "id": 3,
+              "imageUrl": "https://cdn.pixabay.com/photo/2018/06/10/17/39/market-3466906_640.jpg"
+            },
+            {
+              "id": 4,
+              "imageUrl": "https://cruzsl.net/wp-content/uploads/2021/06/carniceria-maison-pare-cruz-1.jpg"
+            }
+          ]
+        }
+      }
+     
+  

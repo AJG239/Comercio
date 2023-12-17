@@ -1,13 +1,13 @@
 "use client"
 
 import React, { useState } from "react";
-import { items } from './../../../data/comercios.json';
+import { img } from './../../../data/carrusel.json';
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "../styles/Bootstrap.module.css";
+import styles from './../styles/Carrusel.css';
 
 export default function BootstrapCarousel() {
-    const { bootstrap } = items;
+    const { carrusel_img } = img;
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
@@ -16,14 +16,9 @@ export default function BootstrapCarousel() {
 
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
-          {bootstrap.map((item) => (
+          {carrusel_img.map((item) => (
             <Carousel.Item key={item.id} className={styles.itemP} interval={4000}>
-              <img src={item.imageUrl} alt="slides" />
-              <Carousel.Caption className={styles.caption}>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-                <button className="btn btn-danger">Visit Docs</button>
-              </Carousel.Caption>
+              <img src={item.imageUrl} alt="slides" className="w-2/3 m-auto object-cover"/>
             </Carousel.Item>
           ))}
         </Carousel>
