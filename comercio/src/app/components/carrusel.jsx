@@ -2,7 +2,6 @@
 
 import { AiOutlineExpandAlt } from "react-icons/ai";
 import Lightbox from "yet-another-react-lightbox";
-import { promises as fs } from 'fs';
 import React, { useState } from "react";
 
 export default async function Carrusel(){

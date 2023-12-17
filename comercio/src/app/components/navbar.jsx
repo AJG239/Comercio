@@ -1,23 +1,34 @@
 import Link from "next/link"
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default function Navbar(){
     return(
-        <nav className="m-4 p-4">
-            <ul className= 'flex gap-4 flex-row-reverse'>
-                <li className="bg-yellow-300 p-3 rounded-lg">
-                    <Link href='./../admin_login'>Admin_Login</Link>
+        <nav className="m-4 p-2">
+            <ul className= 'flex flex-row-reverse justify-between'>
+                <li className="p-3">
+                    <Link href='./../admin_login'><i class="bi bi-person-vcard text-5xl"></i></Link>
                 </li>
 
-                <li className="bg-yellow-300 p-3 rounded-lg">
-                    <Link href='./../comercio_login' className="text-lg">Comercio_Login</Link>
+                <li className="p-3">
+                    <Link href='./../comercio_login' className="text-lg"><i class="bi bi-person-badge text-5xl"></i></Link>
                 </li>
 
-                <li className="bg-yellow-300 p-3 rounded-lg">
-                    <Link href='./../user_login'>User_Login</Link>
+                <li className=" p-3">
+                    <Link href='./../user_login'><i class="bi bi-people text-5xl"></i></Link>
                 </li>
 
-                <li className="bg-yellow-300 p-3 rounded-lg">
-                    <Link href='./../'>Home_Page</Link>
+                <h2 className="p-3 antialiased hover:subpixel-antialiased">ShopView</h2>
+
+                <li className="p-3">
+                    <i class="bi bi-info-circle text-5xl"></i>
+                </li>
+
+                <li className="p-3">
+                    <i class="bi bi-shop text-5xl"></i>
+                </li>
+
+                <li className="p-3">
+                    <Link href='./../'><i class="bi bi-house text-5xl"></i></Link>
                 </li> 
             </ul>
         </nav>
