@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react";
-import { img } from './../../../data/carrusel.json';
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './../styles/Carrusel.css';
