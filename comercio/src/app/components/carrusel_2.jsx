@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
+import { img } from './../../../data/carrusel.json';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './../styles/Carrusel.css';
 
