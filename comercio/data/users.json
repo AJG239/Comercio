@@ -1,0 +1,29 @@
+{
+    "users":[
+        {
+            "id": "7842780234",
+            "user": "alex",
+            "email": "morethanonlygames@gmail.com",
+            "password": "AJG",
+            "ciudad": "Madrid",
+            "intereses": "pescar",
+            "recibirOfertas": true
+        }, {
+            "id": "6539264932",
+            "user": "rodrigo",
+            "email": "",
+            "password": "AJG",
+            "ciudad": "Madrid",
+            "intereses": "deporte",
+            "recibirOfertas": true
+        }, {
+            "id": "543268593629",
+            "user": "pablo",
+            "email": "beriliomasmagnesio@gmail.com",
+            "password": "AJG",
+            "ciudad": "Madrid",
+            "intereses": "familia",
+            "recibirOfertas": false
+        }
+    ]
+}

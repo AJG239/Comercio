@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { METHODS } from "http";
+import Login from "../../components/login";
 
 export default function user_Log(){
 
@@ -15,10 +15,33 @@ export default function user_Log(){
     }
 
     const LogUser = async (a) => {
-        
-    }
+        try{
+            const response = await fetch('/api/user_login/user_log',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(values)
+            });
+            
+            const data = await response.json();
+
+            if (data.valid){
+                router.push(`/user_login/${values.user}`);
+            } else{
+                console.error('Invalid values.');
+            }
+        } catch (error){
+            console.error('ERROR: ', error);
+        }
+            
+    };
 
     return(
-        <></>
+        <div>
+            <div>
+                <Login values={values} setValues={UpdateValues} submit={LogUser}></Login>
+            </div>
+        </div>
     );
 }
