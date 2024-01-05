@@ -38,7 +38,7 @@ export default function userRegister(){
         <div>
             <div>
             <h1 className="text-2xl font-bold mb-4">Registro de Usuario</h1>
-                <form onSubmit={handleRegister}>
+                <form onSubmit={registerInfo}>
                     <label className="block mb-2">
                         Nombre:
                         <input
@@ -46,7 +46,7 @@ export default function userRegister(){
                             type="text"
                             name="user"
                             value={userInfo.user}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                             required
                         />
                     </label>
@@ -57,7 +57,7 @@ export default function userRegister(){
                             type="text"
                             name="email"
                             value={userInfo.email}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                         />
                     </label>
                     <label className="block mb-2">
@@ -67,7 +67,7 @@ export default function userRegister(){
                             type="password"
                             name="password"
                             value={userInfo.password}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                             required
                         />
                     </label>
@@ -78,7 +78,7 @@ export default function userRegister(){
                             type="text"
                             name="edad"
                             value={userInfo.edad}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                         />
                     </label>
                     <label className="block mb-2">
@@ -88,7 +88,7 @@ export default function userRegister(){
                             type="text"
                             name="ciudad"
                             value={userInfo.ciudad}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                         />
                     </label>
                     <label className="block mb-2">
@@ -98,7 +98,7 @@ export default function userRegister(){
                             type="text"
                             name="intereses"
                             value={userInfo.intereses}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                         />
                     </label>
                     <label className="block mb-2">
@@ -108,7 +108,7 @@ export default function userRegister(){
                             type="checkbox"
                             name="recibirOfertas"
                             checked={userInfo.recibirOfertas}
-                            onChange={handleInputChange}
+                            onChange={changeInfo}
                         />
                     </label>
                     <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
