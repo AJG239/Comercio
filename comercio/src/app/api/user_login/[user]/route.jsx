@@ -3,7 +3,7 @@ import fs, { read } from 'fs';
 import { readFileSync, writeFileSync } from "fs";
 import { users } from './../../../../../data/users.json'
 
-export async function GET(request, { params }){
+export default async function GET(request, { params }){
     try{
         const data = await fs.promises.readFile(users, 'utf-8');
         const user_log = JSON.parse(data || '[]');
@@ -20,7 +20,7 @@ export async function GET(request, { params }){
     }
 }
 
-export async function DELETE(request){
+export default async function DELETE(request){
     try{
         const user = JSON.parse(readFileSync(users, 'utf-8') || '[]');
         const { id } = await request.json();
@@ -40,7 +40,7 @@ export async function DELETE(request){
 }
 
 
-export async function PUT(request, { params }){
+export default async function PUT(request, { params }){
     try{
         const user = JSON.parse(readFileSync(users, 'utf-8') || '[]');
         const userIn = user.findIndex((user) => user.user === params.user);

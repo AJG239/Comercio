@@ -1,7 +1,7 @@
 import { NextResponse } from "next/dist/server/web/spec-extension/response";
 import { readFileSync } from "fs";
 
-export async function GET({params}){
+export default async function GET({params}){
     try{
         const comercios = JSON.parse(readFileSync('comercios.json', 'utf-8') || '[]');
 
