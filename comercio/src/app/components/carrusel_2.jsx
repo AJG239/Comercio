@@ -1,13 +1,13 @@
-"use client"
+'use client'
 
 import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
-import { img } from './../../../data/carrusel.json';
+import { img_2 } from './../../../data/carrusel.json';
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from './../styles/Carrusel.css';
 
 export default function BootstrapCarousel() {
-    const { carrusel_img } = img;
+    const { carrusel_img } = img_2;
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
