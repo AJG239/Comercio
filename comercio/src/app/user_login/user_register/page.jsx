@@ -29,7 +29,7 @@ export default function userRegister(){
             body: JSON.stringify(userInfo)
         });
 
-        if (res.value){
+        if (res.ok){
             router.push('/user_login/user_log');
         }
     };
@@ -37,10 +37,10 @@ export default function userRegister(){
     return(
         <div>
             <div>
-            <h1 className="text-2xl font-bold mb-4">Registro de Usuario</h1>
+            <h1 className="text-2xl font-bold mb-4">Register User</h1>
                 <form onSubmit={registerInfo}>
                     <label className="block mb-2">
-                        Nombre:
+                        Name:
                         <input
                             className="w-full border p-2"
                             type="text"
@@ -61,7 +61,7 @@ export default function userRegister(){
                         />
                     </label>
                     <label className="block mb-2">
-                        Contraseña:
+                        <Password></Password>:
                         <input
                             className="w-full border p-2"
                             type="password"
@@ -72,7 +72,7 @@ export default function userRegister(){
                         />
                     </label>
                     <label className="block mb-2">
-                        Edad:
+                        Age:
                         <input
                             className="w-full border p-2"
                             type="text"
@@ -102,7 +102,7 @@ export default function userRegister(){
                         />
                     </label>
                     <label className="block mb-2">
-                        Permitir recibir ofertas:
+                        Enable Offers:
                         <input
                             className="ml-2"
                             type="checkbox"
@@ -112,7 +112,7 @@ export default function userRegister(){
                         />
                     </label>
                     <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Registrarse
+                        Sign Up
                     </button>
                 </form>
             </div>

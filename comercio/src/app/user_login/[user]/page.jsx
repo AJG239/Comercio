@@ -13,7 +13,7 @@ export default function updateData({params}){
             const res = await fetch(`/api/user_login/${params,user}`);
             const data = await res.json();
 
-            if (res.valid){
+            if (res.ok){
                 setUserInfo(data.user);  
             }
         };
@@ -21,10 +21,10 @@ export default function updateData({params}){
         fetchData();
     }, []);
 
-    const eliminar = async () => {
+    const deleteUser = async () => {
         const id = userInfo.id;
 
-        const res = await fetch(`/api/usel_login/${params.user}`, {
+        const res = await fetch(`/api/user_login/${params.user}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export default function updateData({params}){
             body: JSON.stringify({id})
         });
 
-        if (res.valid){
+        if (res.ok){
             const data = await res.json();
 
             if(data.message === 'user deleted'){
@@ -51,9 +51,55 @@ export default function updateData({params}){
                 recibirOfertas: active
             })
         });
+
+        if (res.ok) {
+            const userData = await res.json();
+            setUserInfo(userData.user); 
+        } 
     }
 
-    
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+                {userInfo ? (
+                    <div>
+                        <h1 className="text-2xl font-bold mb-4">Datos del usuario: {userInfo.id}</h1>
+                        <p><strong>User:</strong> {userInfo.user}</p>
+                        <p><strong>Email:</strong> {userInfo.email}</p>
+                        <p><strong>Age:</strong> {userInfo.edad}</p>
+                        <p><strong>City:</strong> {userInfo.ciudad}</p>
+                        <p><strong>:</strong> {userInfo.intereses}</p>
+                        <p><strong>Permite recibir ofertas:</strong> {userInfo.recibirOfertas ? 'Sí' : 'No'}</p>
+
+                        <h2 className="text-lg font-semibold mt-4">Panel de Usuario</h2>
+
+                        <button className="block px-4 py-2 mb-4 text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300" onClick={deleteUser}>
+                            Darme de Baja
+                        </button>
+                        
+
+                        <button className="block px-4 py-2 mb-4 text-white bg-purple-500 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300" onClick={() => handleToggleOffers(!userInfo.recibirOfertas)}>
+                            {infoUsuario.permiteRecibirOfertas ? 'Desactivar RecibirOfertas' : 'Activar RecibirOfertas'}
+                        </button>
+
+
+                        <button className="block px-4 py-2 mb-4 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300" onClick={() => router.push(`/usuario/modDatos/${userInfo.id}`)}>
+                            Modificar Datos
+                        </button>
+
+                        {/*cambiar ruta*/}
+                        <Link href="/usuario/buscarComercios">
+                            <p className="block px-4 py-2 text-white bg-pink-500 rounded-md hover:bg-pink-600 focus:outline-none focus:ring focus:border-pink-300">
+                                Buscar comercios y hacer resenas del comercio
+                            </p>
+                        </Link>
+                    </div>
+                ) : (
+                    <p>Cargando información del usuario...</p>
+                )}
+            </div>
+        </div>
+    );
 }
 
 
