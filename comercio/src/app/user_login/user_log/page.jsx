@@ -15,6 +15,8 @@ export default async function user_Log(){
     }
 
     const LogUser = async (a) => {
+        a.preventDefault();
+        
         try{
             const response = await fetch('/api/user_login/user_log',{
                 method: 'POST',

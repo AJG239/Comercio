@@ -14,7 +14,7 @@ export default function Navbar(){
                 </li>
 
                 <li className=" p-3">
-                    <Link href='./../user_login'><i class="bi bi-people text-5xl"></i></Link>
+                    <Link href='./../user_login/user_log'><i class="bi bi-people text-5xl"></i></Link>
                 </li>
 
                 <h2 className="p-3 antialiased hover:subpixel-antialiased">ShopView</h2>

@@ -12,8 +12,5 @@ export async function POST(request) {
 
     writeFileSync( users , JSON.stringify(user));
 
-    return NextResponse.json({
-        message: 'Usuario registrado con exito',
-        id: newUser.id,
-    });
+    return NextResponse.json({message: 'Usuario registrado con exito', id: newUser.id});
 }

@@ -1,25 +1,29 @@
 {
-    "comercios":{
-        "pescaderia_1":[
-                {
-                    "id": 1,
-                    "Ciudad": "Madrid",
-                    "Actividad": "Pesca",
-                    "Titulo": "Pesacdería Los Mellizos",
-                    "Textos": "Si tiene una cena elegante llevese un bogavante",
-                    "Foto_perfil": "Mellizos.jpg",
-                    "Datos_Admin": [
-                        {
-                            "Scoring": 5,
-                            "Numero_Puntuaciones": 3,
-                            "Reseñas":[
-                                "La vendedora muy maja",
-                                "Los precios asequibles y la vendedora muy maja",
-                                "Otro día le pido el numero a la vendedora"
-                            ]
-                        }
-                    ]
-                }
+    "comercios":[
+        {
+            "id": 1,
+            "user": "alex",
+            "assword": "AJG",
+            "cif": "239",
+            "ciudad": "Madrid",
+            "acticidad": "Pesca",
+            "titulo": "Pesacdería Los Mellizos",
+            "textos": "Si tiene una cena elegante llevese un bogavante",
+            "foto_perfil": "Mellizos.jpg",
+            "scoring": 5,
+            "numero_Puntuaciones": 3,
+            "reseñas": [
+                "La vendedora muy maja",
+                "Los precios asequibles y la vendedora muy maja",
+                "Otro día le pido el numero a la vendedora"
             ]
-    }
+        },{
+            "id": "239",
+            "user": "admin",
+            "password": "admin",
+            "cif": "0",
+            "ciudad": "world",
+            "mail": "admin@gmail.com"
+          }
+    ]
 }

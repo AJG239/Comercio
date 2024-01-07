@@ -1,5 +1,5 @@
-import { NextResponse } from "next/dist/server/web/spec-extension/response";
-import fs, { read } from 'fs';
+import { NextResponse } from "next/server";
+import fs from 'fs';
 import { readFileSync, writeFileSync } from "fs";
 import { users } from './../../../../../data/users.json'
 
@@ -55,7 +55,7 @@ export default async function PUT(request, { params }){
         } else{
             return NextResponse.json({error: 'user has not been found'})
         }
-    } catch (error){
+    } catch (e){
         return NextResponse.json({error: 'ERROR --> user denied'})
     }
 }

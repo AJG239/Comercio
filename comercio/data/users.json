@@ -5,6 +5,7 @@
             "user": "alex",
             "email": "morethanonlygames@gmail.com",
             "password": "AJG",
+            "edad": 19,
             "ciudad": "Madrid",
             "intereses": "pescar",
             "recibirOfertas": true
@@ -13,6 +14,7 @@
             "user": "rodrigo",
             "email": "",
             "password": "AJG",
+            "edad": 19,
             "ciudad": "Madrid",
             "intereses": "deporte",
             "recibirOfertas": true
@@ -21,6 +23,7 @@
             "user": "pablo",
             "email": "beriliomasmagnesio@gmail.com",
             "password": "AJG",
+            "edad": 19,
             "ciudad": "Madrid",
             "intereses": "familia",
             "recibirOfertas": false

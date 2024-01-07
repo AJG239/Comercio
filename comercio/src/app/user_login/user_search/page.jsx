@@ -18,7 +18,7 @@ const searchShop = () => {
                 shop.id === searchShop ||
                 shop.user.toLowerCase().includes(searchShop.toLowerCase()) ||
                 shop.ciudad.toLowerCase().includes(searchShop.toLowerCase())
-            )
+            );
         });
 
         setFoundShop(look_up);
@@ -36,7 +36,7 @@ const searchShop = () => {
                 <h2 className="text-2xl font-bold mb-4">Search Shop: </h2>
                 <div className="flex mb-4">
                     <input className="flex-grow px-3 py-2 mr-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" type="text" placeholder="ID, Name, City o Activity" value={searchShop} onChange={(e) => setSearchShop(e.target.value)}/>
-                    <button className="px-4 py-2  text-black bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300" onClick={search}> Buscar: </button>
+                    <button className="px-4 py-2  text-black bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300" onClick={search}> Search: </button>
                 </div>
         
                 {foundShop.length > 0 ? (

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -10,6 +10,7 @@ export default function updateUser({params}){
         user: '',
         email: '',
         password: '',
+        edad: '',
         ciudad: '',
         intereses: '',
         recibirOfertas: false
@@ -22,14 +23,14 @@ export default function updateUser({params}){
 
     const registerInfo = async (e) => {
         const res = await fetch(`/api/user_login/user_data_upd/${params.id}`, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'Content-Type': 'applications/json'
             },
             body: JSON.stringify(userData)
         });
 
-        const data = await response.json();
+        const data = await res.json();
 
         if (res.ok){
             setUserInfo(data.user);
@@ -53,8 +54,6 @@ export default function updateUser({params}){
                         intereses: data.user.intereses || '',
                         recibirOfertas: data.user.recibirOfertas || false,
                     });
-                } else {
-                    console.error(data.error);
                 }
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -124,7 +123,7 @@ export default function updateUser({params}){
                                 />
                             </div>
                             <div className="mb-4">
-                                <label className="block text-sm font-semibold text-gray-600">Intereses:</label>
+                                <label className="block text-sm font-semibold text-gray-600">Looking for:</label>
                                 <input
                                     type="text"
                                     name="intereses"
@@ -146,7 +145,7 @@ export default function updateUser({params}){
                                 />
                             </div>
                             <button type="submit" className="bg-green-500 text-white px-4 py-2 mb-4 rounded hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
-                                Guardar Información
+                                Save
                             </button>
                         </form>
                         
@@ -155,7 +154,7 @@ export default function updateUser({params}){
                         </button>
                     </div>
                 ) : (
-                    <p>Cargando información del usuario...</p>
+                    <p>LOADING...</p>
                 )}
             </div>
         </div>

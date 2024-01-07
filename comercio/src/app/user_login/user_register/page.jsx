@@ -10,6 +10,7 @@ export default function userRegister(){
         user: '',
         email: '',
         password: '',
+        edad: '',
         ciudad: '',
         intereses: '',
         recibirOfertas: false
@@ -21,6 +22,8 @@ export default function userRegister(){
     };
 
     const registerInfo = async (e) => {
+        e.preventDefault();
+
         const res = await fetch('/api/user_login/user_register', {
             method: 'POST',
             headers: {
@@ -82,7 +85,7 @@ export default function userRegister(){
                         />
                     </label>
                     <label className="block mb-2">
-                        Ciudad:
+                        <City></City>:
                         <input
                             className="w-full border p-2"
                             type="text"
@@ -92,7 +95,7 @@ export default function userRegister(){
                         />
                     </label>
                     <label className="block mb-2">
-                        Intereses:
+                        Looking for:
                         <input
                             className="w-full border p-2"
                             type="text"

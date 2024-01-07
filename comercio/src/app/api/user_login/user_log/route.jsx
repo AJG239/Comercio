@@ -1,4 +1,4 @@
-import { NextResponse } from "next/dist/server/web/spec-extension/response";
+import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
 import { users } from './../../../../../data/users.json'
 
@@ -10,9 +10,9 @@ export default async function POST(request){
         const validUsers = logged_users.some((user_2) => user_2.user === user && user_2.password === password);
 
         if(validUsers){
-            return NextResponse.json({ valid: true, message: 'user validated'});
+            return NextResponse.json({ ok: true, message: 'user validated'});
         } else{
-            return NextResponse.json({ valid: false, message: 'user no validated'});
+            return NextResponse.json({ ok: false, message: 'user no validated'});
         }
 
     } catch(error){

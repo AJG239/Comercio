@@ -9,15 +9,12 @@ export async function GET(request, { params }) {
         const user_data = JSON.parse(data || '[]');     
         const user = user_data.find((user) => user.id === params.id);
         
-       
-        if (user) {
-            console.log(user);
+        if (user){
             return NextResponse.json({ user });
-        } else {
+        } else{
             return NextResponse.json({ error: 'user not found' });
         }
-    } catch (error) {
-        console.error('Error: ', error);
+    } catch (error){
         return NextResponse.json({ error: 'ERROR' });
     }
 }
@@ -26,23 +23,19 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
     try {
-        console.log(params.id);
         const user = JSON.parse(readFileSync( users , 'utf-8') || '[]');
-        const updateData = await request.json();
         const userIndex = user.findIndex((user) => user.id === params.id);
+        const updateData = await request.json();
 
-        if (userIndex !== -1) {
+        if (userIndex !== -1){
             user[userIndex] = { ...user[userIndex], ...updateData };
             writeFileSync( users , JSON.stringify(user, null, 2), 'utf-8');
 
-            return NextResponse.json({
-                message: 'user update',
-                user: user[userIndex],
-            });
-        } else {
+            return NextResponse.json({message: 'user update', user: user[userIndex]});
+        } else{
             return NextResponse.json({ error: 'user not found',});
         }
-    } catch (e) {
+    } catch (e){
         return NextResponse.json({ error: 'ERROR --> User not udated', });
     }
 }
