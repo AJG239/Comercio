@@ -6,11 +6,11 @@ export default function Navbar(){
         <nav className="m-4 p-2">
             <ul className= 'flex flex-row-reverse justify-between'>
                 <li className="p-3">
-                    <Link href='./../admin_login'><i class="bi bi-person-vcard text-5xl"></i></Link>
+                    <Link href='./../admin_login/admin_log'><i class="bi bi-person-vcard text-5xl"></i></Link>
                 </li>
 
                 <li className="p-3">
-                    <Link href='./../comercio_login' className="text-lg"><i class="bi bi-person-badge text-5xl"></i></Link>
+                    <Link href='./../comercio_login/shop_log' className="text-lg"><i class="bi bi-person-badge text-5xl"></i></Link>
                 </li>
 
                 <li className=" p-3">
