@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { readFileSync, writeFileSync } from 'fs';
-import { users } from './../../../../../data/users.json'
+import { users } from '../../../../../data/users.json'
 
 export async function POST(request) {
     const data = await request.json();

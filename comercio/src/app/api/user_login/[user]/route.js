@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from 'fs';
 import { readFileSync, writeFileSync } from "fs";
-import { users } from './../../../../../data/users.json'
+import { users } from '../../../../../data/users.json'
 
 export default async function GET(request, { params }){
     try{

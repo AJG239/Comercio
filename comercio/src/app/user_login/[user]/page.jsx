@@ -11,7 +11,7 @@ export default function updateData({params}){
     useEffect(() => {
         const fetchData = async () =>{
             try{
-                const res = await fetch(`/api/user_login/${params,user}`);
+                const res = await fetch(`/api/user_login/${params.user}`);
                 const data = await res.json();
 
                 if (res.ok){

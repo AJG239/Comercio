@@ -55,7 +55,7 @@ const userLookShop = () => {
                
                 {foundUser.length > 0 ? (
                     <div className="mt-4 mb-4">
-                        <h4 className="text-xl font-bold mb-2">Usuarios encontrados:</h4>
+                        <h4 className="text-xl font-bold mb-2">User founds:</h4>
                         <ul>
                             {foundUser.map(foundUser => (
                                 <li key={foundUser.id} className="mb-2">

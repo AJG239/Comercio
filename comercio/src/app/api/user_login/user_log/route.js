@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
-import { users } from './../../../../../data/users.json'
+import { users } from '../../../../../data/users.json';
 
-export default async function POST(request){
+async function POST(request){
     try{
         const logged_users = JSON.parse(readFileSync(users, 'utf-8') || '[]');
         const {user, password} = await request.json();
@@ -20,3 +20,4 @@ export default async function POST(request){
     }
 }
 
+export default POST;
