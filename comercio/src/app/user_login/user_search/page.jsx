@@ -9,7 +9,7 @@ const searchShop = () => {
     const [foundShop, setFoundShop] = useState([]);
 
     useEffect(() => {
-        fetch('/api').then(res => res.json()).then(data => {setShop(data.shop || []);})
+        fetch('/api').then(res => res.json()).then(data => {setShop(data.comercios || []);}).catch(error => console.error('ERROR in Shops:', error));
     }, []);
 
     const search = () => {
@@ -31,12 +31,12 @@ const searchShop = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="container mx-auto w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-screen flex items-center justify-center bg-indigo-100">
+            <div className="container mx-auto w-full p-6 bg-transparent">
                 <h2 className="text-2xl font-bold mb-4">Search Shop: </h2>
                 <div className="flex mb-4">
-                    <input className="flex-grow px-3 py-2 mr-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" type="text" placeholder="ID, Name, City o Activity" value={searchShop} onChange={(e) => setSearchShop(e.target.value)}/>
-                    <button className="px-4 py-2  text-black bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300" onClick={search}> Search: </button>
+                    <input className="flex-grow px-3 py-2 mr-2 border rounded-md focus:outline-none focus:ring focus:border-indigo-300" type="text" placeholder="ID, Name, City o Activity" value={searchShop} onChange={(e) => setSearchShop(e.target.value)}/>
+                    <button className="px-4 py-2 rounded-xl text-black bg-lime-500 hover:bg-lime-600 focus:outline-none focus:ring focus:border-lime-300" onClick={search}> Search: </button>
                 </div>
         
                 {foundShop.length > 0 ? (
@@ -54,7 +54,7 @@ const searchShop = () => {
                     <p className="mt-4 mb-4">No shop found</p>
                 )}
 
-                <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300" onClick={searchRes}>
+                <button className="block px-4 py-2 mb-4 text-white bg-indigo-300 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300" onClick={searchRes}>
                     Post review
                 </button>
                 

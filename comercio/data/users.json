@@ -7,7 +7,7 @@
     "edad": 19,
     "ciudad": "Madrid",
     "intereses": "deporte",
-    "recibirOfertas": true
+    "recibirOfertas": false
   },
   {
     "id": "543268593629",

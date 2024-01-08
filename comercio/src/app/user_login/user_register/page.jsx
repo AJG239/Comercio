@@ -38,85 +38,40 @@ export default function userRegister(){
     };
 
     return(
-        <div>
-            <div>
+        <div className="min-h-full flex items-center justify-center bg-indigo-100">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
             <h1 className="text-2xl font-bold mb-4">Register User</h1>
                 <form onSubmit={registerInfo}>
-                    <label className="block mb-2">
-                        Name:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="user"
-                            value={userInfo.user}
-                            onChange={changeInfo}
-                            required
-                        />
+
+                    <label className="block mb-2">Name:
+                        <input className="w-full border p-2" type="text" name="user" value={userInfo.user} onChange={changeInfo} required/>
                     </label>
-                    <label className="block mb-2">
-                        Email:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="email"
-                            value={userInfo.email}
-                            onChange={changeInfo}
-                        />
+
+                    <label className="block mb-2">mail:
+                        <input className="w-full border p-2" type="text"  name="email" value={userInfo.email} onChange={changeInfo}/>
                     </label>
-                    <label className="block mb-2">
-                        <Password></Password>:
-                        <input
-                            className="w-full border p-2"
-                            type="password"
-                            name="password"
-                            value={userInfo.password}
-                            onChange={changeInfo}
-                            required
-                        />
+
+                    <label className="block mb-2">Password:
+                        <input className="w-full border p-2" type="password" name="password" value={userInfo.password} onChange={changeInfo} required/>
                     </label>
-                    <label className="block mb-2">
-                        Age:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="edad"
-                            value={userInfo.edad}
-                            onChange={changeInfo}
-                        />
+
+                    <label className="block mb-2">Age:
+                        <input className="w-full border p-2" type="text" name="edad" value={userInfo.edad} onChange={changeInfo}/>
                     </label>
-                    <label className="block mb-2">
-                        <City></City>:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="ciudad"
-                            value={userInfo.ciudad}
-                            onChange={changeInfo}
-                        />
+
+                    <label className="block mb-2">City:
+                        <input className="w-full border p-2" type="text" name="ciudad" value={userInfo.ciudad} onChange={changeInfo}/>
                     </label>
-                    <label className="block mb-2">
-                        Looking for:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="intereses"
-                            value={userInfo.intereses}
-                            onChange={changeInfo}
-                        />
+
+                    <label className="block mb-2">Looking for:
+                        <input className="w-full border p-2" type="text" name="intereses" value={userInfo.intereses} onChange={changeInfo} />
                     </label>
-                    <label className="block mb-2">
-                        Enable Offers:
-                        <input
-                            className="ml-2"
-                            type="checkbox"
-                            name="recibirOfertas"
-                            checked={userInfo.recibirOfertas}
-                            onChange={changeInfo}
-                        />
+
+                    <label className="block mb-2">Enable Offers:
+                        <input className="ml-2" type="checkbox" name="recibirOfertas" checked={userInfo.recibirOfertas} onChange={changeInfo}/>
                     </label>
-                    <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Sign Up
-                    </button>
+
+                    <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Sign Up</button>
                 </form>
             </div>
         </div>
