@@ -9,11 +9,13 @@ export default function userShop({params}) {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                console.log('params', params)
+                console.log('paramsid', params.user)
                 const res = await fetch(`/api/comercios_login/${params.user}`);
                 const data = await res.json();
     
                 if (res.ok) {
-                    setShopInfo(data.comercio);
+                    setShopInfo(data.comercio); //El problema del comercio por ahora esta aquí
                 }
             } catch (error) {
                 console.error('ERROR ', error);
@@ -37,7 +39,7 @@ export default function userShop({params}) {
             const data = await res.json();
 
             if (res.ok) {
-                if (data.message === 'shop deleted') {
+                if (data.message === 'Shop Deleted') {
                     router.push('/comercio_login/shop_log');
                 } 
             }

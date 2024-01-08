@@ -19,7 +19,7 @@ export async function GET(request, {paramas}){
 
 export async function PUT(request, {paramas}){
     try{
-        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8') || '[]');
+        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8'));
         const shopUpdate = await request.json();
         const shopIndex = shops.findIndex((shop) => shop.id === paramas.id);
 

@@ -25,7 +25,7 @@ export default function useMod({paramas}){
         a.preventDefault();
 
         try{
-            const res = await fetch(`/api/comercio_login/shop_data/${paramas.id}`, {
+            const res = await fetch(`/api/comercios_login/shop_data/${paramas.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ export default function useMod({paramas}){
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const res = await fetch(`/api/comercio_login/shop_data/${paramas.id}`);
+                const res = await fetch(`/api/comercios_login/shop_data/${paramas.id}`);
                 const data = await res.json();
 
                 if (res.ok){

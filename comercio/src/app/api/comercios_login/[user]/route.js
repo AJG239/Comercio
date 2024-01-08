@@ -19,7 +19,7 @@ export async function GET(request, {params}){
 
 export async function DELETE(request){
     try{
-        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8') || '[]');
+        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8'));
         const {id} = await request.json();
         const shopDelete = shops.findIndex((shop) => shop.id === id);
 
@@ -37,7 +37,8 @@ export async function DELETE(request){
 
 export async function PUT(request, {paramas}){
     try{
-        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8') || '[]');
+        console.log(paramas.user);
+        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8'));
         const uptData = await request.json();
         const shopIndex = shops.findIndex((shops) => shops.user === paramas.user);
 
@@ -50,7 +51,7 @@ export async function PUT(request, {paramas}){
         } else{
             return NextResponse.json({error: 'User Not Found'});
         }
-    } catch (error){
+    } catch (e){
         return NextResponse.json({error: 'ERROR Updating User'});
     }
 }

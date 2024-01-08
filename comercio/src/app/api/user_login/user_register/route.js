@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync } from 'fs';
 
 export async function POST(request) {
     const data = await request.json();
-    const user = JSON.parse(readFileSync( 'data/users.json' , 'utf-8') || '[]');
+    const user = JSON.parse(readFileSync('data/users.json' , 'utf-8'));
     const id = Date.now().toString();
     const newUser = { id, ...data };
 

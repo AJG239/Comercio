@@ -12,7 +12,7 @@ const userLookShop = () => {
     useEffect(() => {
         const lookShop = async () => {
             try {
-                const res = await fetch('/api/comercio_login/user_data');
+                const res = await fetch('/api/comercios_login/user_data');
 
                 if (res.ok) {
                     const data = await res.json();

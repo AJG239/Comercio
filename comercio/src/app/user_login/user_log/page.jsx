@@ -17,7 +17,7 @@ export default function user_Log(){
         a.preventDefault();
         
         try{
-            const response = await fetch('/api/user_login/user_log',{
+            const response = await fetch('/api/user_login/user_log', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,8 +26,9 @@ export default function user_Log(){
             });
             
             const data = await response.json();
+            console.log(data);
 
-            if (data.valid){
+            if (data.ok){
                 router.push(`/user_login/${values.user}`);
             }
         } catch (error){
@@ -37,9 +38,10 @@ export default function user_Log(){
     };
 
     return(
-        <div>
-            <div>
-                <Login values={values} setValues={UpdateValues} submit={LogUser}></Login>
+        <div className="min-h-screen flex items-center justify-center">
+            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+                <h1 className="text-2xl font-bold mb-3 py-2">Login User</h1>
+                    <Login values={values} setValues={UpdateValues} submit={LogUser}></Login>
             </div>
         </div>
     );
