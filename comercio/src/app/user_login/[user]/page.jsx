@@ -44,7 +44,7 @@ export default function updateData({params}){
                 }
             }
         } catch (error){
-            console.error('ERROR --> user not deleted: ', error);
+            console.error('ERROR user not deleted: ', error);
         }
     };
 

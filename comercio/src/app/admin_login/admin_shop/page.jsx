@@ -10,7 +10,7 @@ const searchShop = () => {
 
     useEffect(() => {
         fetch('/api/admin_login/admin_shop/').then(res => res.json()).then(data => {setShops(data.shops || []);})
-        .catch(error => console.error('ERROR --> ', error));
+        .catch(error => console.error('ERROR ', error));
     }, []);
 
     const searchShoppig = () => {
@@ -46,7 +46,7 @@ const searchShop = () => {
                 }
             }
         } catch (error){
-            console.error('ERROR Deleting The Shop --> ', error);
+            console.error('ERROR Deleting The Shop ', error);
         }
     };
 

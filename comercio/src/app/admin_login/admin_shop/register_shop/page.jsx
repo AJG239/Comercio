@@ -35,14 +35,14 @@ export default function registerShop(){
                 router.push('/admin_login/admin_shop');    
             }
         } catch (error){
-            console.error('ERROR --> ', error);
+            console.error('ERROR ', error);
         }
     }
 
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
-                <h1 className="text-2xl font-bold mb-4">Registrar Comercio</h1>
+                <h1 className="text-2xl font-bold mb-4">Sign Up Shop</h1>
                 <form onSubmit={registerShop}>
                     <label className="block mb-2">
                         Names Shop:

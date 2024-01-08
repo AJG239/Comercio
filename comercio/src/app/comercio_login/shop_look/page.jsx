@@ -20,7 +20,7 @@ const userLookShop = () => {
                     setUser(data.user);
                 } 
             } catch (error) {
-                console.error('ERROR --> ', error);
+                console.error('ERROR ', error);
             }
         };
 

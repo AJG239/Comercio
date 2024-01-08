@@ -33,7 +33,7 @@ export default function adminLogPage() {
                 router.push(`/admin_login/${values.user}`);
             }
         } catch (error){
-            console.error('ERROR --> ', error);
+            console.error('ERROR ', error);
         }
     };
 

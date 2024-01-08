@@ -52,6 +52,6 @@ export async function PUT(request, {paramas}){
             return NextResponse.json({error: 'User Not Found'});
         }
     } catch (error){
-        return NextResponse.json({error: 'ERROR --> Updating User'});
+        return NextResponse.json({error: 'ERROR Updating User'});
     }
 }

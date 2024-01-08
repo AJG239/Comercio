@@ -16,6 +16,6 @@ export async function POST(request){
         }
 
     } catch(error){
-        return NextResponse.json({error: 'ERROR --> in validation of the user'})
+        return NextResponse.json({error: 'ERROR in validation of the user'})
     }
 }

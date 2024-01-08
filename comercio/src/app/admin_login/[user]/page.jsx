@@ -15,7 +15,7 @@ export default function adminLog({paramas}){
                     setAdmin(data.admin);
                 }
             } catch (error){    
-                console.log('ERROR --> ', error);
+                console.log('ERROR ', error);
             }
         };
         fetchData();

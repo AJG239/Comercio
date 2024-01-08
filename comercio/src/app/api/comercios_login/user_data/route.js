@@ -12,6 +12,6 @@ export async function GET({paramas}){
             return NextResponse.json({error: 'User Not Valid'})
         }
     } catch (error){
-        return NextResponse({error: 'ERROR --> User File'});
+        return NextResponse({error: 'ERROR User File'});
     }
 }

@@ -13,6 +13,6 @@ export async function GET(request, {paramas}){
             return NextResponse.json({error: 'Shop Not Found'});
         }
     } catch (error){
-        return NextResponse.json({error: 'ERROR --> File'});
+        return NextResponse.json({error: 'ERROR File'});
     }
 }

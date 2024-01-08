@@ -41,6 +41,6 @@ export async function GET({paramas}){
             return NextResponse.json({error: 'No Shops Available'});
         }
     } catch (error){
-        return NextResponse.json({error: 'ERROR --> File Shops'});
+        return NextResponse.json({error: 'ERROR File Shops'});
     }
 }

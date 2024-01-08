@@ -13,7 +13,7 @@ export async function GET(request, {paramas}){
             return NextResponse.json({error: 'Shop Not Found'});
         }
     } catch (error){
-        return NextResponse.json({error: 'ERROR --> Reading File'});
+        return NextResponse.json({error: 'ERROR Reading File'});
     }
 }
 
@@ -30,6 +30,6 @@ export async function PUT(request, {paramas}){
             return NextResponse.json({message: 'Shop Update', user: shops[shopIndex]});
         }
     } catch (error){
-        return NextResponse.json({error: 'ERROR --> Shop Has Not Been Updated'});
+        return NextResponse.json({error: 'ERRORs Shop Has Not Been Updated'});
     }
 }

@@ -35,7 +35,7 @@ export async function PUT(request, { params }) {
             return NextResponse.json({ error: 'user not found',});
         }
     } catch (e){
-        return NextResponse.json({ error: 'ERROR --> User not udated', });
+        return NextResponse.json({ error: 'ERROR User not updated', });
     }
 }
 

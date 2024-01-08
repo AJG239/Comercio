@@ -14,6 +14,6 @@ export async function POST(request){
             return NextResponse.json({ ok: false, message: 'user no validated'});
         }
     } catch (error){    
-        return NextResponse.json({error: 'ERROR --> Admin Authentication'});
+        return NextResponse.json({error: 'ERROR Admin Authentication'});
     }
 }

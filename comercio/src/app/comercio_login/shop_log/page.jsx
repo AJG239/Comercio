@@ -32,7 +32,7 @@ export default function logPage(){
                 router.push(`/comercio_login/${values.user}`);
             }
         } catch (error){
-            console.error('ERROR --> ', error);
+            console.error('ERROR ', error);
         }
     }
 

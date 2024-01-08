@@ -39,7 +39,7 @@ export default function useMod({paramas}){
                 setShopInfo(data.user);
             }
         } catch (error){
-            console.error('ERROR --> ', error);
+            console.error('ERROR ', error);
         }
     }
 
@@ -62,7 +62,7 @@ export default function useMod({paramas}){
                     })
                 }
             } catch (error){
-                console.error('ERROR --> ', error);
+                console.error('ERROR ', error);
             }
         };
 

@@ -56,7 +56,7 @@ export default async function PUT(request, { params }){
             return NextResponse.json({error: 'user has not been found'})
         }
     } catch (e){
-        return NextResponse.json({error: 'ERROR --> user denied'})
+        return NextResponse.json({error: 'ERROR user denied'})
     }
 }
 

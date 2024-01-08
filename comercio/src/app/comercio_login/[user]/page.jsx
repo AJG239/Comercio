@@ -16,7 +16,7 @@ export default function userShop({params}) {
                     setShopInfo(data.comercio);
                 }
             } catch (error) {
-                console.error('ERROR -->', error);
+                console.error('ERROR ', error);
             }
         };
         fetchData();
@@ -42,7 +42,7 @@ export default function userShop({params}) {
                 } 
             }
         } catch (error) {
-            console.error('ERROR --> ', error);
+            console.error('ERROR ', error);
         }
     };
 
