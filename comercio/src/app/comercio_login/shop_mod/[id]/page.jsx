@@ -72,8 +72,8 @@ export default function useMod({paramas}){
     const router = useRouter();
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-screen flex items-center justify-center bg-indigo-100">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
                 {shopInfo ? (
                     <div>
                         <h1 className="text-2xl font-bold mb-4">Update Data:{shopInfo.user}</h1>
@@ -81,85 +81,43 @@ export default function useMod({paramas}){
                         <form onSubmit={submitShop} className="mt-4">
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">Name:</label>
-                                <input
-                                    type="text"
-                                    name="user"
-                                    value={shopData.user}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                    required
-                                />
+                                <input type="text" name="user" value={shopData.user} onChange={changeShop} className="mt-1 p-2 w-full border rounded-md" required />
                             </div>
+                            
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">Password:</label>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    value={shopData.password}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                    required
-                                />
+                                <input type="password" name="password" value={shopData.password} onChange={changeShop} className="mt-1 p-2 w-full border rounded-md"  required/>
                             </div>
 
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">City:</label>
-                                <input
-                                    type="text"
-                                    name="ciudad"
-                                    value={shopData.ciudad}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                />
+                                <input type="text" name="ciudad" value={shopData.ciudad} onChange={changeShop}className="mt-1 p-2 w-full border rounded-md"/>
                             </div>
+
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">Activity:</label>
-                                <input
-                                    type="text"
-                                    name="actividad"
-                                    value={shopData.actividad}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                />
+                                <input type="text" name="actividad" value={shopData.actividad} onChange={changeShop} className="mt-1 p-2 w-full border rounded-md"/>
                             </div>
+
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">Title:</label>
-                                <input
-                                    type="text"
-                                    name="titulo"
-                                    value={shopData.titulo}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                />
+                                <input type="text" name="titulo" value={shopData.titulo} onChange={changeShop} className="mt-1 p-2 w-full border rounded-md"/>
                             </div>
+
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">Text:</label>
-                                <textarea
-                                    name="texto"
-                                    value={shopData.textos}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                />
+                                <textarea name="texto" value={shopData.textos} onChange={changeShop} className="mt-1 p-2 w-full border rounded-md"/>
                             </div>
+
                             <div className="mb-4">
                                 <label className="block text-sm font-semibold text-gray-600">Photo:</label>
-                                <textarea
-                                    name="fotos"
-                                    value={shopData.foto}
-                                    onChange={changeShop}
-                                    className="mt-1 p-2 w-full border rounded-md"
-                                />
+                                <textarea name="fotos" value={shopData.foto} onChange={changeShop} className="mt-1 p-2 w-full border rounded-md"/>
                             </div>
                             
-
-                            <button type="submit" className="bg-green-500 text-white px-4 py-2 mb-4 rounded hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
-                                SAVE
-                            </button>
+                            <button type="submit" className="bg-indigo-300 text-white px-4 py-2 mb-4 rounded hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300">SAVE</button>
                         </form>
                         
-                        <button onClick={() => router.back()} className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 focus:outline-none focus:ring focus:border-gray-300">
-                            BACK
-                        </button>
+                        <button onClick={() => router.back()} className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 focus:outline-none focus:ring focus:border-gray-300">BACK</button>
                     </div>
                 ) : (
                     <p>LOADING...</p>

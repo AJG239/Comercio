@@ -42,17 +42,15 @@ const userLookShop = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-10 flex items-center justify-center bg-indigo-100">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold mb-4">Interested Users</h2>
+
                 <div className="flex">
-                    <input className="flex-grow px-3 py-2 mr-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300" type="text" placeholder="Ciudad" value={lookUp} onChange={(e) => setLookUp(e.target.value)} />
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300" onClick={lookUpShop}>
-                        Search
-                    </button>
+                    <input className="flex-grow px-3 py-2 mr-2 border rounded-md focus:outline-none focus:ring focus:border-indigo-300" type="text" placeholder="Ciudad" value={lookUp} onChange={(e) => setLookUp(e.target.value)} />
+                    <button className="px-4 py-2 bg-indigo-300 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300" onClick={lookUpShop}>Search</button>
                 </div>
 
-               
                 {foundUser.length > 0 ? (
                     <div className="mt-4 mb-4">
                         <h4 className="text-xl font-bold mb-2">User founds:</h4>
@@ -60,7 +58,7 @@ const userLookShop = () => {
                             {foundUser.map(foundUser => (
                                 <li key={foundUser.id} className="mb-2">
                                     {`Nombre: ${foundUser.user}, Email: ${foundUser.email}, Intereses: ${foundUser.intereses}`}
-                                    <button className="ml-2 px-2 py-1 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300" onClick={() => sendEmail(foundUser.email)}>Send Mail</button>
+                                    <button className="ml-2 px-2 py-1 bg-indigo-300 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300" onClick={() => sendEmail(foundUser.email)}>Send Mail</button>
                                 </li>
                             ))}
                         </ul>

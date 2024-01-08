@@ -23,8 +23,8 @@ export default function adminLog({params}){
     }, []);
 
     return(
-        <div className="min-h-screen flex items-center justify-center bg-white-100">
-            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-10 flex items-center justify-center bg-white-100">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
                 {admin ? (
                     <div className="flex items-center justify-center mb-4"> 
                         <div>
@@ -36,9 +36,7 @@ export default function adminLog({params}){
                 )}
 
                 <Link href="/admin_login/admin_shop">
-                    <p className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Admin Shops
-                    </p>
+                    <p className="block px-4 py-2 mb-4 text-white bg-indigo-300 rounded-lg hover:bg-indigo-600">Admin Shops</p>
                 </Link>
             </div>
         </div>

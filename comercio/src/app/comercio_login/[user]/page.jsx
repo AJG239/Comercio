@@ -15,7 +15,7 @@ export default function userShop({params}) {
                 const data = await res.json();
     
                 if (res.ok) {
-                    setShopInfo(data.comercio); //El problema del comercio por ahora esta aquí
+                    setShopInfo(data.shop); //El problema del comercio por ahora esta aquí
                 }
             } catch (error) {
                 console.error('ERROR ', error);
@@ -59,8 +59,8 @@ export default function userShop({params}) {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-10 flex items-center justify-center bg-indigo-100">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
                 {shopInfo ? (
                     <div>
                         <h1 className="text-2xl font-bold mb-4">Shop Data: {shopInfo.user}</h1>
@@ -84,17 +84,11 @@ export default function userShop({params}) {
 
                         <h2 className="text-lg font-semibold mt-4">ADMIN</h2>
                         
-                        <button className="block px-4 py-2 mb-4 text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300" onClick={deleteShop}>
-                            Delete Shop
-                        </button>
+                        <button className="block px-4 py-2 mb-4 text-white bg-indigo-300 rounded-md hover:bg-indigo-600 focus:outline-none focus:border-indigo-300" onClick={deleteShop}>Delete Shop</button>
                         
-                        <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300" onClick={shopSearch}>
-                            Ask For Review
-                        </button>
+                        <button className="block px-4 py-2 mb-4 text-white bg-indigo-300 rounded-md hover:bg-indigo-600 focus:outline-none focus:border-indigo-300" onClick={shopSearch}>Ask For Review</button>
 
-                        <button className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300" onClick={shopUpdate}>
-                            UPDATE
-                        </button>
+                        <button className="block px-4 py-2 mb-4 text-white bg-indigo-300 rounded-md hover:bg-indigo-600 focus:outline-none focus:border-indigo-300" onClick={shopUpdate}>UPDATE</button>
                     </div>
                 ) : (
                     <p>LOADING...</p>
