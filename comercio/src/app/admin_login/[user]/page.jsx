@@ -1,14 +1,15 @@
 'use client'
 
 import { useEffect, useState } from "react"
+import Link from 'next/link'
 
-export default function adminLog({paramas}){
+export default function adminLog({params}){
     const [admin, setAdmin] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`/api/admin_log/${paramas.user}`);
+                const res = await fetch(`/api/admin_log/${params.user}`);
                 const data = await res.json();
 
                 if(res.ok){
@@ -34,7 +35,7 @@ export default function adminLog({paramas}){
                     <p>LOADING...</p>
                 )}
 
-                <Link href="/admin_login/admin/shop">
+                <Link href="/admin_login/admin_shop">
                     <p className="block px-4 py-2 mb-4 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
                         Admin Shops
                     </p>

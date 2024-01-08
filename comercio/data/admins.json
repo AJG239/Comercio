@@ -1,11 +1,9 @@
-{
-    "admins":[
-        {
-            "user": "admin1",
-            "password": "admin1"
-        }, {
-            "user": "AJG",
-            "password": "AJG"
-        }
-    ]
-}
+[
+    {
+        "user": "admin1",
+        "password": "admin1"
+    }, {
+        "user": "AJG",
+        "password": "AJG"
+    }
+]

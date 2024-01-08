@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import fs from 'fs';
 import { readFileSync, writeFileSync } from "fs";
-import { users } from '../../../../../data/users.json'
 
-export default async function GET(request, { params }){
+export async function GET(request, { params }){
     try{
         const data = await fs.promises.readFile('data/users.json', 'utf-8');
         const user_log = JSON.parse(data || '[]');
@@ -20,7 +19,7 @@ export default async function GET(request, { params }){
     }
 }
 
-export default async function DELETE(request){
+export async function DELETE(request){
     try{
         const user = JSON.parse(readFileSync('data/users.json', 'utf-8') || '[]');
         const { id } = await request.json();
@@ -40,7 +39,7 @@ export default async function DELETE(request){
 }
 
 
-export default async function PUT(request, { params }){
+export async function PUT(request, { params }){
     try{
         const user = JSON.parse(readFileSync('data/users.json', 'utf-8') || '[]');
         const userIn = user.findIndex((user) => user.user === params.user);

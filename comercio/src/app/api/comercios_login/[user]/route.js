@@ -1,10 +1,9 @@
 import fs, { readFileSync, writeFileSync } from 'fs';
 import { NextResponse } from 'next/server';
 
-
 export async function GET(request, {params}){
         try {
-            const data = await fs.promises.readFile( 'data/comercios.json', 'utf-8');
+            const data = await fs.promises.readFile('data/comercios.json', 'utf-8');
             const shops = JSON.parse(data || '[]');
             const shop = shops.find((shop) => shop.user === params.user);
 

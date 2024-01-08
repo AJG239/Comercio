@@ -18,7 +18,7 @@ export default function logPage(){
         a.preventDefault();
 
         try{
-            const res = await fetch('/api/comercio_login/shop_log', {
+            const res = await fetch('/api/comercios_login/shop_log', {
                 method: 'POST',
                 headers:{
                     'Content-Type': 'application/json'

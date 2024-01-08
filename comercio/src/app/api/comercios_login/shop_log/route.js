@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function POST(request){
     try{   
-        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8') || '[]');
-        const {user, password} = await request.json();
-        const userVla = shops.some((shops) => shops.user === user && shops.password === password);
+        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8'));
+        const user = await request.json();
+        const userVla = shops.some((shops) => shops.user === user.user && shops.password === user.password);
 
         if(userVla){
             return NextResponse.json({ ok: true, message: 'user validated'});

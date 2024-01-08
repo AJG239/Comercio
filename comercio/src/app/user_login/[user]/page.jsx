@@ -90,12 +90,12 @@ export default function updateData({params}){
                         </button>
 
 
-                        <button className="block px-4 py-2 mb-4 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300" onClick={() => router.push(`/usuario/modDatos/${userInfo.id}`)}>
+                        <button className="block px-4 py-2 mb-4 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring focus:border-yellow-300" onClick={() => router.push(`/user_login/user_data_upd/${userInfo.id}`)}>
                             Update Data
                         </button>
 
                         {/*cambiar ruta*/}
-                        <Link href="/usuario/buscarComercios">
+                        <Link href="/user_login/user_search">
                             <p className="block px-4 py-2 text-white bg-pink-500 rounded-md hover:bg-pink-600 focus:outline-none focus:ring focus:border-pink-300">
                                 Search shop and make a review
                             </p>

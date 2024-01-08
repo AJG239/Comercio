@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { NextResponse } from 'next/dist/server/web/spec-extension/response';
+import { NextResponse } from 'next/server';
 
 export async function GET(request, {paramas}){
     try{

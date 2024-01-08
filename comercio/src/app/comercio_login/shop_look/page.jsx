@@ -38,7 +38,7 @@ const userLookShop = () => {
     };
 
     const sendEmail = (email) => {
-        console.log(`Enviando correo a ${email}`);
+        console.log(`Sending Mail ${email}`);
     };
 
     return (

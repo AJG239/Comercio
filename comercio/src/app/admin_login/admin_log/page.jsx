@@ -4,13 +4,12 @@ import { useState } from "react"
 import { useRouter } from 'next/navigation'
 import Login from "@/app/components/login";
 
-
 export default function adminLogPage() {
     const [values, setValues] = useState({user: '', password: ''});
     
     const valuesUpd = (a) => {
         const {name, value} = a.target;
-        setValues({...values, [name]: value})
+        setValues({...values, [name]: value});
     };
 
     const router = useRouter();
@@ -27,10 +26,15 @@ export default function adminLogPage() {
                 body: JSON.stringify(values)
             });
 
+            console.log(response)
             const data = await response.json();
+            console.log(data)
 
             if (data.ok){
+                console.log('Login exitoso');
                 router.push(`/admin_login/${values.user}`);
+            } else{
+                console.error('Credenciales invalidas');
             }
         } catch (error){
             console.error('ERROR ', error);

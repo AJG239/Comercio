@@ -31,7 +31,10 @@ export default function registerShop(){
                 body: JSON.stringify(shop)
             });
 
+            const data = await res.json();
+
             if (res.ok){
+                console.log(data);
                 router.push('/admin_login/admin_shop');    
             }
         } catch (error){

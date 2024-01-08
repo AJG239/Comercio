@@ -70,14 +70,14 @@ export default function userShop({params}) {
                         <p><strong>Email:</strong> {shopInfo.mail}</p>
 
                         <p><strong>Activity:</strong> {shopInfo.actividad}</p>
-                        <p><strong>Text:</strong> {shopInfo.texto}</p>
+                        <p><strong>Text:</strong> {shopInfo.textos}</p>
 
-                        <img className="w-full h-40 object-none object-center" src={`./${shopInfo.fotos}`} alt={`${shopInfo.nombre}`} />
+                        <img className="w-full h-40 object-none object-center" src={`./${shopInfo.foto_perfil}`} alt={`${shopInfo.titulo}`} />
                         
                         <h1 className="text-2xl font-bold mb-4">Shop Info</h1>
 
                         <p><strong>Score:</strong> {shopInfo.scoring}</p>
-                        <p><strong>Total Reviews:</strong> {shopInfo.numero_de_puntuaciones}</p>
+                        <p><strong>Total Reviews:</strong> {shopInfo.numero_Puntuaciones}</p>
                         <p><strong>Shop Reviews:</strong> {shopInfo.resenas}</p>
 
                         <h2 className="text-lg font-semibold mt-4">ADMIN</h2>

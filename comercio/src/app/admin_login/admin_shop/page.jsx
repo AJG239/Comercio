@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
+import Link from 'next/link'
 
 
 const searchShop = () => {
@@ -54,7 +55,7 @@ const searchShop = () => {
         <div className="min-h-screen flex items-center justify-center bg-gray-100"> 
             <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
 
-                <Link href="/admin/AdministrarComercios/RegistrarComercio">
+                <Link href="/admin_login/admin_shop/register_shop">
                     <p className="block px-4 py-2 text-white bg-green-500 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
                         Sign Up Shoop
                     </p>
@@ -79,7 +80,7 @@ const searchShop = () => {
                         <input
                             className="flex-grow px-3 py-2 mr-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                             type="text"
-                            placeholder="ID, Nombre, Ciudad, Actividad"
+                            placeholder="ID, Name, City, Activity"
                             value={searchShop}
                             onChange={(e) => setSearchShop(e.target.value)}
                         />
