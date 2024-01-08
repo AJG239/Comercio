@@ -38,8 +38,8 @@ export default function user_Log(){
     };
 
     return(
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-full flex items-center justify-center">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg shadow-md">
                 <h1 className="text-2xl font-bold mb-3 py-2">Login User</h1>
                     <Login values={values} setValues={UpdateValues} submit={LogUser}></Login>
             </div>

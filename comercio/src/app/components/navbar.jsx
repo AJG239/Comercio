@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default function Navbar(){
     return(
-        <nav className="m-4 p-2">
+        <nav className="m-4 p-2 bg-indigo-200 border-r-2 rounded-md">
             <ul className= 'flex flex-row-reverse justify-between'>
                 <li className="p-3">
                     <Link href='/admin_login/admin_log'><i className="bi bi-person-vcard text-5xl"></i></Link>
