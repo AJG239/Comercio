@@ -43,68 +43,31 @@ export default function registerShop(){
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-md">
+        <div className="min-h-10 flex items-center justify-center bg-indigo-100">
+            <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
                 <h1 className="text-2xl font-bold mb-4">Sign Up Shop</h1>
                 <form onSubmit={registerShop}>
-                    <label className="block mb-2">
-                        Names Shop:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="user"
-                            value={shop.user}
-                            onChange={updShop}
-                        />
+                    <label className="block mb-2">Names Shop:
+                        <input className="w-full border p-2" type="text" name="user" value={shop.user} onChange={updShop}/>
                     </label>
 
-                    <label className="block mb-2">
-                        Password:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="password"
-                            value={shop.password}
-                            onChange={updShop}
-                        />
+                    <label className="block mb-2">Password:
+                        <input className="w-full border p-2" type="text" name="password" value={shop.password} onChange={updShop}/>
                     </label>
 
-                    <label className="block mb-2">
-                        CIF:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="cif"
-                            value={shop.cif}
-                            onChange={updShop}
-                        />
+                    <label className="block mb-2">CIF:
+                        <input className="w-full border p-2" type="text" name="cif" value={shop.cif} onChange={updShop}/>
                     </label>
 
-                    <label className="block mb-2">
-                        City:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="ciudad"
-                            value={shop.ciudad}
-                            onChange={updShop}
-                        />
+                    <label className="block mb-2">City:
+                        <input className="w-full border p-2" type="text" name="ciudad" value={shop.ciudad} onChange={updShop}/>
                     </label>
 
-                    <label className="block mb-2">
-                        Mail:
-                        <input
-                            className="w-full border p-2"
-                            type="text"
-                            name="mail"
-                            value={shop.mail}
-                            onChange={updShop}
-                        />
+                    <label className="block mb-2">Mail:
+                        <input className="w-full border p-2" type="text" name="mail" value={shop.mail} onChange={updShop}/>
                     </label>
 
-                    <button className="w-full bg-blue-500 text-white p-2 rounded" type="submit">
-                        Sign Up Shop
-                    </button>
+                    <button className="w-full bg-indigo-500 text-white p-2 rounded" type="submit">Sign Up Shop</button>
                 </form>
             </div>
         </div>

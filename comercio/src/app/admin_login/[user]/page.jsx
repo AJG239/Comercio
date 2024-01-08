@@ -23,7 +23,7 @@ export default function adminLog({params}){
     }, []);
 
     return(
-        <div className="min-h-10 flex items-center justify-center bg-white-100">
+        <div className="min-h-10 flex items-center justify-center bg-indigo-100">
             <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
                 {admin ? (
                     <div className="flex items-center justify-center mb-4"> 
