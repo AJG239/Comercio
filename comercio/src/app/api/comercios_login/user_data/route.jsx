@@ -1,11 +1,10 @@
 import { readFileSync } from "fs";
-import { users } from './../../../../../data/users.json'
 import { NextResponse } from "next/server";
 
 
 export async function GET({paramas}){
     try {
-        const users_2 = JSON.parse(readFileSync(users, 'utf-8') || '[]');
+        const users_2 = JSON.parse(readFileSync('data/users.json', 'utf-8') || '[]');
          
         if (users_2.length > 0){
             return NextResponse.json({users_2});

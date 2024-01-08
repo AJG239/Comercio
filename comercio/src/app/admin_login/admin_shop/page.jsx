@@ -113,3 +113,5 @@ const searchShop = () => {
         </div>
     );
 }
+
+export default searchShop;

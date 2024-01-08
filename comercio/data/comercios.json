@@ -3,7 +3,7 @@
         {
             "id": 1,
             "user": "alex",
-            "assword": "AJG",
+            "password": "AJG",
             "cif": "239",
             "ciudad": "Madrid",
             "actividad": "Pesca",

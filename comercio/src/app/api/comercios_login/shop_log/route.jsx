@@ -1,11 +1,9 @@
 import { readFileSync } from "fs";
 import { NextResponse } from "next/server";
-import { comercios } from './../../../../../data/comercios.json'
-
 
 export async function POST(request){
     try{   
-        const shops = JSON.parse(readFileSync(comercios, 'utf-8') || '[]');
+        const shops = JSON.parse(readFileSync('data/comercios.json', 'utf-8') || '[]');
         const {user, password} = await request.json();
         const userVla = shops.some((shops) => shops.user === user && shops.password === password);
 

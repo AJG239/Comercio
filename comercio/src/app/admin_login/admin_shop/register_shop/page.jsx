@@ -31,8 +31,6 @@ export default function registerShop(){
                 body: JSON.stringify(shop)
             });
 
-            const data = res.json()
-            
             if (res.ok){
                 router.push('/admin_login/admin_shop');    
             }
