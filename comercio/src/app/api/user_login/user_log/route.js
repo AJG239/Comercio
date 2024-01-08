@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
-import { users } from '../../../../../data/users.json';
 
 export async function POST(request){
     try{
-        const logged_users = JSON.parse(readFileSync(users, 'utf-8') || '[]');
+        const logged_users = JSON.parse(readFileSync('data/users.json', 'utf-8') || '[]');
         const {user, password} = await request.json();
 
         const validUsers = logged_users.some((user_2) => user_2.user === user && user_2.password === password);

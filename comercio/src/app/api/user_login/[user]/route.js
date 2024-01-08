@@ -5,7 +5,7 @@ import { users } from '../../../../../data/users.json'
 
 export default async function GET(request, { params }){
     try{
-        const data = await fs.promises.readFile(users, 'utf-8');
+        const data = await fs.promises.readFile('data/users.json', 'utf-8');
         const user_log = JSON.parse(data || '[]');
         const user = user_log.find((user) => user.user === params.user);
 
@@ -22,13 +22,13 @@ export default async function GET(request, { params }){
 
 export default async function DELETE(request){
     try{
-        const user = JSON.parse(readFileSync(users, 'utf-8') || '[]');
+        const user = JSON.parse(readFileSync('data/users.json', 'utf-8') || '[]');
         const { id } = await request.json();
         const delete_user = user.findIndex((user) => user.id === id);
 
         if (delete_user !== -1){
             user.splice(delete_user, 1);
-            await writeFileSync(users, JSON.stringify(user, null, 2));
+            await writeFileSync('data/users.json', JSON.stringify(user, null, 2));
 
             return NextResponse.json({message: 'user deleted'});
         } else{
@@ -42,14 +42,14 @@ export default async function DELETE(request){
 
 export default async function PUT(request, { params }){
     try{
-        const user = JSON.parse(readFileSync(users, 'utf-8') || '[]');
+        const user = JSON.parse(readFileSync('data/users.json', 'utf-8') || '[]');
         const userIn = user.findIndex((user) => user.user === params.user);
         const dataUdate = await request.json();
 
         if (userIn !== -1){
             user[userIn] = {...user[userIn], ...dataUdate};
 
-            writeFileSync(users, JSON.stringify(user, null, 2), 'utf-8');
+            writeFileSync('data/users.json', JSON.stringify(user, null, 2), 'utf-8');
 
             return NextResponse.json({message: 'user data did not update', user: user[userIn]});
         } else{

@@ -1,11 +1,10 @@
 import { NextResponse } from 'next/server';
 import { readFileSync, writeFileSync } from 'fs';
-import { users } from './../../../../../data/users.json'
 import fs from 'fs';
 
 export async function GET(request, { params }) {
     try {
-        const data = await fs.promises.readFile( users , 'utf-8');
+        const data = await fs.promises.readFile( 'data/users.json' , 'utf-8');
         const user_data = JSON.parse(data || '[]');     
         const user = user_data.find((user) => user.id === params.id);
         
@@ -23,13 +22,13 @@ export async function GET(request, { params }) {
 
 export async function PUT(request, { params }) {
     try {
-        const user = JSON.parse(readFileSync( users , 'utf-8') || '[]');
+        const user = JSON.parse(readFileSync( 'data/users.json' , 'utf-8') || '[]');
         const userIndex = user.findIndex((user) => user.id === params.id);
         const updateData = await request.json();
 
         if (userIndex !== -1){
             user[userIndex] = { ...user[userIndex], ...updateData };
-            writeFileSync( users , JSON.stringify(user, null, 2), 'utf-8');
+            writeFileSync( 'data/users.json' , JSON.stringify(user, null, 2), 'utf-8');
 
             return NextResponse.json({message: 'user update', user: user[userIndex]});
         } else{
