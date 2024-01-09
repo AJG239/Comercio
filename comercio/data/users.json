@@ -1,1 +1,32 @@
-[{"id":"6539264932","user":"rodrigo","email":"","password":"AJG","edad":19,"ciudad":"Madrid","intereses":"deporte","recibirOfertas":false},{"id":"543268593629","user":"pablo","email":"beriliomasmagnesio@gmail.com","password":"AJG","edad":19,"ciudad":"Madrid","intereses":"familia","recibirOfertas":false},{"id":"1704738886371","user":"alex","email":"m","password":"AJG","edad":"19","ciudad":"Madrid","intereses":"pescado","recibirOfertas":"on"}]
+[
+  {
+    "id": "6539264932",
+    "user": "rodrigo",
+    "email": "",
+    "password": "AJG",
+    "edad": 19,
+    "ciudad": "Madrid",
+    "intereses": "deporte",
+    "recibirOfertas": false
+  },
+  {
+    "id": "543268593629",
+    "user": "pablo",
+    "email": "beriliomasmagnesio@gmail.com",
+    "password": "AJG",
+    "edad": 19,
+    "ciudad": "Madrid",
+    "intereses": "familia",
+    "recibirOfertas": false
+  },
+  {
+    "id": "1704738886371",
+    "user": "alex",
+    "email": "m",
+    "password": "AJG",
+    "edad": "19",
+    "ciudad": "Madrid",
+    "intereses": "pescado",
+    "recibirOfertas": true
+  }
+]

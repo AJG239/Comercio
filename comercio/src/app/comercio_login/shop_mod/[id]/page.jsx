@@ -36,7 +36,7 @@ export default function useMod({paramas}){
             const data = await res.json();
 
             if (res.ok){
-                setShopInfo(data.user);
+                setShopInfo(data.shopIndex);
             }
         } catch (error){
             console.error('ERROR ', error);
@@ -49,11 +49,13 @@ export default function useMod({paramas}){
                 const res = await fetch(`/api/comercios_login/shop_data/${paramas.id}`);
                 const data = await res.json();
 
+                console.log(data)
+
                 if (res.ok){
                     setShopInfo(data.user);
                     setShopData({
                         user: data.user.user || '',
-                        password: data.user.password || '',
+                        password: '',
                         ciudad: data.user.ciudad || '',
                         actividad: data.user.actividad || '',
                         titulo: data.user.titulo || '',
@@ -67,12 +69,12 @@ export default function useMod({paramas}){
         };
 
         fetchData();
-    }, [paramas.id]);
+    }, []);
 
     const router = useRouter();
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-indigo-100">
+        <div className="min-h-10 flex items-center justify-center bg-indigo-100">
             <div className="max-w-md w-full p-6 bg-transparent rounded-lg">
                 {shopInfo ? (
                     <div>
