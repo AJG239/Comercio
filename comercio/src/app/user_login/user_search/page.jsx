@@ -9,7 +9,7 @@ const searchShop = () => {
     const [foundShop, setFoundShop] = useState([]);
 
     useEffect(() => {
-        fetch('/api').then(res => res.json()).then(data => {setShop(data.comercios);}).catch(error => console.error('ERROR in Shops:', error));
+        fetch('/api').then(res => res.json()).then(data => {setShop(data.shop);}).catch(error => console.error('ERROR in Shops:', error));
     }, []);
 
     const search = () => {

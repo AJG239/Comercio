@@ -31,7 +31,7 @@ function ResenaComercio() {
             const data = await res.json();
 
             if (res.ok) {
-                setShopInfo(data.comercio);
+                setShopInfo(data.shops);
                 router.back();
             }
         } catch (error) {

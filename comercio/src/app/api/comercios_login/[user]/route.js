@@ -7,6 +7,8 @@ export async function GET(request, {params}){
             const shops = JSON.parse(data || '[]');
             const shop = shops.find((shop) => shop.user === params.user);
 
+            console.log(shop)
+            
             if (shop){
                 return NextResponse.json({shop});
             } else{
