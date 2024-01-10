@@ -1,11 +1,13 @@
 import fs, { readFileSync, writeFileSync } from 'fs'
 import { NextResponse } from 'next/server';
 
-export async function GET(request, {paramas}){
+export async function GET(request, {params}){
     try{
         const data = await fs.promises.readFile('data/comercios.json', 'utf-8');
         const users = JSON.parse(data || '[]')
-        const user = users.find((user) => user.id === paramas.id);
+        const user = users.find((user) => user.id === params.id);
+  
+        console.log(user)
         
         if (user){
             return NextResponse.json({user});
@@ -27,9 +29,9 @@ export async function PUT(request, {paramas}){
             shops[shopIndex] = {...shops[shopIndex], ...shopUpdate};
             writeFileSync('data/comercios.json', JSON.stringify(shops, null, 2), 'utf-8');
 
-            return NextResponse.json({message: 'Shop Update', user: shops[shopIndex]});
+            return NextResponse.json({message: 'Shop Update', user: shops[shopIndex],});
         }
-    } catch (error){
+    } catch (e){
         return NextResponse.json({error: 'ERRORs Shop Has Not Been Updated'});
     }
 }

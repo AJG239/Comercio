@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react"
 
 
-export default function useMod({paramas}){
+export default function useMod({params}){
     const [shopInfo, setShopInfo] = useState(null);
     const [shopData, setShopData] = useState({
         user: '',
@@ -25,7 +25,7 @@ export default function useMod({paramas}){
         a.preventDefault();
 
         try{
-            const res = await fetch(`/api/comercios_login/shop_data/${paramas.id}`, {
+            const res = await fetch(`/api/comercios_login/shop_data/${params.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export default function useMod({paramas}){
             const data = await res.json();
 
             if (res.ok){
-                setShopInfo(data.shopIndex);
+                setShopInfo(data.user);
             }
         } catch (error){
             console.error('ERROR ', error);
@@ -46,7 +46,7 @@ export default function useMod({paramas}){
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const res = await fetch(`/api/comercios_login/shop_data/${paramas.id}`);
+                const res = await fetch(`/api/comercios_login/shop_data/${params.id}`);
                 const data = await res.json();
 
                 console.log(data)
@@ -69,7 +69,7 @@ export default function useMod({paramas}){
         };
 
         fetchData();
-    }, []);
+    }, [params.id]);
 
     const router = useRouter();
 
